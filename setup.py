@@ -37,7 +37,7 @@ setup(
     package_data={"seleniumwire2": ["py.typed"]},
     extras_require={"test": ["httpbin", "pytest", "pytest-cov"]},
     keywords="selenium-wire-2",
-    name="selenium-wire-2",
+    name="selenium-wire-2-uc",
     packages=find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
     setup_requires=[],
     test_suite="tests.seleniumwire",
