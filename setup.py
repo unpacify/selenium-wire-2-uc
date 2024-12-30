@@ -34,7 +34,7 @@ setup(
         "mitmproxy>=10.3.0",
         "selenium>=4.0.0",
     ],
-    package_data={"seleniumwire2": ["py.typed"]},
+    package_data={"seleniumwire2-uc": ["py.typed"]},
     extras_require={"test": ["httpbin", "pytest", "pytest-cov"]},
     keywords="selenium-wire-2",
     name="selenium-wire-2-uc",
@@ -42,7 +42,7 @@ setup(
     setup_requires=[],
     test_suite="tests.seleniumwire",
     tests_require=["pytest"],
-    url="https://github.com/7x11x13/selenium-wire-2",
+    url="https://github.com/unpacify/selenium-wire-2-uc",
     version="0.2.1",
     zip_safe=False,
 )
