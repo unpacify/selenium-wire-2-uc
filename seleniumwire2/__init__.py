@@ -11,8 +11,6 @@ from mitmproxy.http import Headers
 from seleniumwire2.exceptions import SeleniumWireException
 from seleniumwire2.options import ProxyConfig, SeleniumWireOptions
 from seleniumwire2.webdriver import Chrome, Edge, Firefox, Remote, Safari
-from seleniumwire2.undetected_chromedriver import Chrome as UndetectedChrome
-from seleniumwire2.undetected_chromedriver import uc as UndetectedChromeOptions
 
 __all__ = [
     "Cert",
