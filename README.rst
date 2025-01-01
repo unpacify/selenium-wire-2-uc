@@ -3,6 +3,8 @@ Selenium Wire 2
 
 Fork of Will Keeling's `Selenium Wire <https://github.com/wkeeling/selenium-wire>`_
 
+This has undetected-chromedriver added to enhance the stealth.
+
 Selenium Wire extends `Selenium's <https://www.selenium.dev/documentation/en/>`_ Python bindings to give you access to the underlying requests made by the browser. You author your code in the same way as you do with Selenium, but you get extra APIs for inspecting requests and responses and making changes to them on the fly.
 
 .. image:: https://github.com/7x11x13/selenium-wire-2/workflows/build/badge.svg
