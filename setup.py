@@ -44,6 +44,6 @@ setup(
     test_suite="tests.seleniumwire",
     tests_require=["pytest"],
     url="https://github.com/unpacify/selenium-wire-2-uc",
-    version="0.2.5",
+    version="0.2.6",
     zip_safe=False,
 )
