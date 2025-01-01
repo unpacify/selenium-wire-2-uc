@@ -17,32 +17,23 @@ log = logging.getLogger(__name__)
 
 
 class Chrome(InspectRequestsMixin, DriverCommonMixin, uc.Chrome):
-    """
-    Extends undetected-chromedriver's Chrome class to integrate Selenium Wire's
-    request inspection and interception capabilities.
-    """
+    """Extend the undetected_chromedriver Chrome class to integrate Selenium Wire."""
 
     def __init__(self, *args, seleniumwire_options: SeleniumWireOptions = None, **kwargs):
-        """
-        Initialize an undetected-chromedriver Chrome WebDriver instance.
-        
-        Args:
-            seleniumwire_options: Selenium Wire–specific configuration options.
-        """
         if seleniumwire_options is None:
             seleniumwire_options = SeleniumWireOptions()
 
-        # Set up the Selenium Wire proxy backend
+        # Set up Selenium Wire proxy backend
         config = self._setup_backend(seleniumwire_options)
 
-        # Configure desired capabilities if auto_config is enabled
+        # Update desired capabilities if auto_config is enabled
         if seleniumwire_options.auto_config:
             capabilities = kwargs.get("desired_capabilities", DesiredCapabilities.CHROME.copy())
             capabilities.update(config)
             kwargs["desired_capabilities"] = capabilities
 
         # Configure ChromeOptions
-        chrome_options = kwargs.get("options", uc.ChromeOptions())
+        chrome_options = kwargs.get("options", ChromeOptions())
         addr, port = urlsafe_address(self.backend.address)
         chrome_options.add_argument(f"--proxy-server={addr}:{port}")
         chrome_options.add_argument(
@@ -52,5 +43,8 @@ class Chrome(InspectRequestsMixin, DriverCommonMixin, uc.Chrome):
 
         log.info("Using undetected-chromedriver with Selenium Wire")
 
-        # Initialize undetected-chromedriver's Chrome class
+        # Initialize undetected_chromedriver's Chrome class
         super().__init__(*args, **kwargs)
+
+
+ChromeOptions = uc.ChromeOptions  # Expose ChromeOptions for external use
