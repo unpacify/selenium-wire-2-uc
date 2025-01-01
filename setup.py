@@ -35,7 +35,7 @@ setup(
         "selenium>=4.0.0",
         "undetected-chromedriver>=3.0.0",
     ],
-    package_data={"seleniumwire2-uc": ["py.typed"]},
+    package_data={"seleniumwire2": ["py.typed"]},
     extras_require={"test": ["httpbin", "pytest", "pytest-cov"]},
     keywords="selenium-wire-2",
     name="selenium-wire-2-uc",
