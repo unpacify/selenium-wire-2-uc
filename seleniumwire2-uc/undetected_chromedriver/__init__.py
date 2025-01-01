@@ -1,3 +1,4 @@
 # seleniumwire2/undetected_chromedriver/__init__.py
 
-from .webdriver import Chrome, ChromeOptions
+from .webdriver import Chrome, uc as UndetectedChrome
+
