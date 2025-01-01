@@ -11,8 +11,8 @@ with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
 setup(
-    author="7x11x13",
-    author_email="x7x11x13@gmail.com",
+    author="unpacify",
+    author_email="copeyeu17@gmail.com",
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
